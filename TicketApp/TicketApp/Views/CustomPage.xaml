@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TicketApp.Views.CustomPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Hello User!  "/>
+            <Label x:Name="SourceLabel" 
+               Text="Source Station" TextColor="Black" />
+            <Entry x:Name="Source" 
+               Placeholder="" TextColor="Black"/>
+            <Label x:Name="DestinationLabel" 
+               Text="Destination Station" TextColor="Black"/>
+            <Entry x:Name="Destination" 
+               Placeholder="" TextColor="Black" />
+            <Label x:Name="DateLabel" Text="Date"></Label>
+            <DatePicker Date="03/09/2022" Format="d" x:Name="datePicker"/>
+         
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

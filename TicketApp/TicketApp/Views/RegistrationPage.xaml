@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TicketApp.Views.RegistrationPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Registration Page" />
+            <Label x:Name="NameLabel" 
+               Text="Name" TextColor="Black" />
+            <Entry x:Name="Name" 
+               Placeholder="" TextColor="Black"/>
+            <Label x:Name="SurnameLabel" 
+               Text="Surname" TextColor="Black"/>
+            <Entry x:Name="Surname" 
+               Placeholder="" TextColor="Black" />
+            <Label x:Name="EmailLabel" 
+               Text="Email" TextColor="Black"/>
+            <Entry x:Name="Email" 
+               Placeholder="" TextColor="Black" />
+            <Label x:Name="LoginLabel" 
+               Text="Login" TextColor="Black"/>
+            <Entry x:Name="Login" 
+               Placeholder="" TextColor="Black" />
+            <Label x:Name="PasswordLabel" 
+               Text="Password" TextColor="Black"/>
+            <Entry x:Name="Password" 
+               Placeholder="" TextColor="Black" />
+            <Label x:Name="ConfirmPassLabel" 
+               Text="Confirm Password" TextColor="Black"/>
+            <Entry x:Name="ConfirmPassword" 
+               Placeholder="" TextColor="Black" />
+            <Button x:Name="RegisterBtn" Text="Register me!" Clicked="RegisterBtn_Clicked"/>
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

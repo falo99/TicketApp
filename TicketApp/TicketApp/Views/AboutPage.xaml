@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TicketApp.Views.AboutPage"
+             xmlns:vm="clr-namespace:TicketApp.ViewModels"
+             BackgroundColor="#15012E">
+
+    <StackLayout>
+        <Image x:Name="Logo" 
+               Source="https://t3.ftcdn.net/jpg/03/18/22/82/360_F_318228233_gT1c2qP9A1ChOXfO1zD4JLRYT7zCMf5t.jpg" />
+        <Label x:Name="LoginLabel" 
+               Text="Login" TextColor="White" />
+        <Entry x:Name="Login" 
+               Placeholder="" TextColor="White"/>
+        <Label x:Name="PasswordLabel" 
+               Text="Password" TextColor="White"/>
+        <Entry x:Name="Password" 
+               Placeholder="" TextColor="White" />
+        <Button x:Name="LoginBtn" Text="Log in" TextColor="White" Clicked="LoginBtn_Clicked"/>
+        
+        <Button x:Name="RegisterBtn" Text="Don't have an account? Register here" Clicked="RegisterBtn_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
