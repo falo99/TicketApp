@@ -2,6 +2,10 @@
 using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using TicketApp.Services;
+using System.IO;
+using SQLite;
+using TicketApp.Models;
 
 namespace TicketApp.Views
 {
@@ -14,15 +18,17 @@ namespace TicketApp.Views
 
         private async void LoginBtn_Clicked(object sender, EventArgs e)
         {
-         //   Label loginlbl = this.FindByName<Label>("LoginLabel");
-         //   Label passwordlbl = this.FindByName<Label>("PasswordLabel");
+            var databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "MyDb.db");
+            var dataBase = new SQLiteConnection(databasePath);
+            var query = dataBase.Table<User>().Where(x => x.Login.Equals(Login.Text) && x.Password.Equals(Password.Text)).FirstOrDefault();
             Entry loginEntry = this.FindByName<Entry>("Login");
             Entry passwordEntry = this.FindByName<Entry>("Password");
             string login = loginEntry.Text;   
             string password = passwordEntry.Text;
-            if(login=="admin" && password=="admin")
+           
+            if(query!=null)
             {
-                await Navigation.PushAsync(new CustomPage(login, password));
+                App.Current.MainPage = new NavigationPage(new CustomPage(login,password));
             }
             else
             {

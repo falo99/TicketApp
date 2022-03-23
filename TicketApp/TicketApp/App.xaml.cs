@@ -8,7 +8,7 @@ namespace TicketApp
 {
     public partial class App : Application
     {
-
+        
         public App()
         {
             InitializeComponent();
